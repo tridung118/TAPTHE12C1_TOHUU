@@ -1,10 +1,10 @@
 const credits = document.getElementById("credits");
 
 const fontSize = parseFloat(getComputedStyle(credits).fontSize);
-const appearEm = -10; // ← chữ bắt đầu xuất hiện cách đáy 6em
+const appearEm = -10; 
 const appearPx = fontSize * appearEm;
 
-let y = window.innerHeight + appearPx; // 🔥 CHỐT Ở ĐÂY
+let y = window.innerHeight + appearPx; 
 let speed = 0.4;
 let paused = false;
 
@@ -22,3 +22,4 @@ function animate() {
 }
 
 requestAnimationFrame(animate);
+
