@@ -1,10 +1,10 @@
 const credits = document.getElementById("credits");
 
 const fontSize = parseFloat(getComputedStyle(credits).fontSize);
-const offsetEm = 6; // chỉnh cao/thấp tại đây
-const offsetPx = fontSize * offsetEm;
+const appearEm = -10; // ← chữ bắt đầu xuất hiện cách đáy 6em
+const appearPx = fontSize * appearEm;
 
-let y = window.innerHeight - offsetPx;
+let y = window.innerHeight + appearPx; // 🔥 CHỐT Ở ĐÂY
 let speed = 0.4;
 let paused = false;
 
@@ -22,15 +22,3 @@ function animate() {
 }
 
 requestAnimationFrame(animate);
-
-//
-// ⏸ PAUSE / RESUME
-//
-
-// PC
-document.addEventListener("mousedown", () => paused = true);
-document.addEventListener("mouseup", () => paused = false);
-
-// Mobile
-document.addEventListener("touchstart", () => paused = true, { passive: true });
-document.addEventListener("touchend", () => paused = false);
