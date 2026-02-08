@@ -1,0 +1,49 @@
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:#000;
+  color:#fff;
+  font-family: system-ui, sans-serif;
+  overflow:hidden;
+}
+
+.wrapper{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+}
+
+.credits{
+  position:absolute;
+  bottom:-100%;
+  width:100%;
+  text-align:center;
+}
+
+h2{
+  margin:30px 0 10px;
+}
+
+p{
+  margin:6px 0;
+  opacity:.85;
+  font-size:15px;
+}
+
+.controls{
+  position:fixed;
+  bottom:20px;
+  width:100%;
+  text-align:center;
+}
+
+button{
+  padding:10px 16px;
+  margin:0 6px;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+}
