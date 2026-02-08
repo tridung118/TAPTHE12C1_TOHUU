@@ -1,7 +1,7 @@
 const credits = document.getElementById("credits");
 
 let y = window.innerHeight;
-const speed = 0.4; 
+const speed = 0.75; 
 
 credits.style.transform = `translateY(${y}px)`;
 
@@ -15,3 +15,4 @@ function animate() {
 }
 
 requestAnimationFrame(animate);
+
