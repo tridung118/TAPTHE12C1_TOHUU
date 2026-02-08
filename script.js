@@ -1,10 +1,10 @@
 const credits = document.getElementById("credits");
 
 const fontSize = parseFloat(getComputedStyle(credits).fontSize);
-const appearEm = -10; // ← chữ bắt đầu xuất hiện cách đáy 6em
+const appearEm = 6;
 const appearPx = fontSize * appearEm;
 
-let y = window.innerHeight + appearPx; // 🔥 CHỐT Ở ĐÂY
+let y = window.innerHeight + appearPx;
 let speed = 0.4;
 let paused = false;
 
@@ -22,3 +22,19 @@ function animate() {
 }
 
 requestAnimationFrame(animate);
+
+//
+// 👇 NHẤN GIỮ ĐỂ PAUSE – CHUẨN NHẤT
+//
+document.addEventListener("pointerdown", (e) => {
+  paused = true;
+  e.preventDefault();
+});
+
+document.addEventListener("pointerup", () => {
+  paused = false;
+});
+
+document.addEventListener("pointercancel", () => {
+  paused = false;
+});
